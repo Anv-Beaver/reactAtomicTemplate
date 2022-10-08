@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Navigate, Route, Router, Routes } from 'react-router-dom';
+
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import RegisterPage from './pages/Example/ExamplePage';
+import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import ExamplePage from './pages/Example/ExamplePage';
+
+
+const Background = styled.div`
+    max-width: 150px;
+`
+
 
 function App() {
+  const params = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Background>
+      <Routes>
+        <Route path='/' element = {<ExamplePage />}/>
+      </Routes>
+    </Background>
   );
 }
+
 
 export default App;

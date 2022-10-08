@@ -1,19 +1,48 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from "react-redux";
+import { legacy_createStore as createStore, applyMiddleware} from 'redux'
+import {BrowserRouter as Router} from 'react-router-dom'
+
+import createSagaMiddleware from 'redux-saga'
+import rootReducer from './reducers';
+import rootSaga from './sagas/index';
+
+import './index.css';
+// import configInfo from "./firebaseConfig.json";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// const firebaseConfig = {
+//   apiKey: configInfo.apiKey,
+//   authDomain: configInfo.authDomain,
+//   projectId: configInfo.projectId,
+//   storageBucket: configInfo.storageBucket,
+//   messagingSenderId: configInfo.messagingSenderId,
+//   appId: configInfo.appId,
+//   measurementId: configInfo.measurementId
+// };
+
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+
+sagaMiddleware.run(rootSaga)
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <Router>
+        <App />
+      </Router>
+    </Provider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
