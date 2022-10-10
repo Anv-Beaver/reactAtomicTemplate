@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import { BottomNavigationBarReducer } from "../common/BottomNavigationBar/BottomNavigationBarReducer";
+import { BottomNavigationBarReducer } from "./BottomNavigationBarReducer";
 
 const rootReducer = combineReducers({
   // adminReducer,

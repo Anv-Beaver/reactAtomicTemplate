@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
-import { taskItem } from "../../pages/LandingPage/LandingConstants";
 import { RootState } from "../../reducers";
 import HomePageIconOn from "../../assets/images/btn-tabbar-home-on@3x.png";
 import HomePageIconOff from "../../assets/images/btn-tabbar-home-off@3x.png";
@@ -52,7 +51,8 @@ export const BottomNavigationBar = () => {
 
     const dispatch = useDispatch();
 
-    const pageIndex: number = useSelector((state : RootState) => state.BottomNavigationBarReducer.index);
+    // const pageIndex: number = useSelector((state : RootState) => state.BottomNavigationBarReducer.index);
+    const pageIndex:number = 0;
         
     // //? 새로고침 했을 때 루트 페이지로 이동?
     // useEffect(() => {
@@ -120,7 +120,8 @@ export const BottomNavigationBar = () => {
 }
 
 const IconItemComponent = (itemNumber: number) => {
-    const selectedNumber: number = useSelector((state : RootState) => state.BottomNavigationBarReducer.index);
+    // const selectedNumber: number = useSelector((state : RootState) => state.BottomNavigationBarReducer.index);
+    const selectedNumber = 0;
     const navigate = useNavigate();
 
     let isSelected: boolean = itemNumber == selectedNumber;

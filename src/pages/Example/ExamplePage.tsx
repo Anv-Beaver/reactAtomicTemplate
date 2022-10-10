@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-import {RootState} from "../../reducers/index";
+// import {RootState} from "../../reducers/index";
 import { RamenSoup } from "./modules/RamenSoup";
 
 

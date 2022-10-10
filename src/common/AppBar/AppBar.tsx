@@ -10,7 +10,6 @@ import { SettingComponent } from "./SettingIcon/SettingIcon";
 
 import searchIconImage from "../../assets/images/btn-search@3x.png";
 import { useDispatch, useSelector } from "react-redux";
-import { SearchCrateAction } from "../../pages/SearchPage/SearchActions";
 
 // btn-search
 
@@ -120,7 +119,7 @@ export const AppBarComponentSearch = () => {
 
     const handleUserKeyPress = (e: any) => {
         if(e.key === "Enter" || e.key === 13){
-            dispatch(SearchCrateAction(search));
+            // dispatch(SearchCrateAction(search));
         }
     }
 
