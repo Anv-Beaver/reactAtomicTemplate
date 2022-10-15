@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 // import {RootState} from "../../reducers/index";
-import { RamenSoup } from "./modules/RamenSoup";
+import { Logo } from "./modules/header";
 
 
 
@@ -16,7 +16,7 @@ function ExamplePage() {
 
     return (
         <div>
-            <RamenSoup />
+            <Logo />
             {/* <RamenNoodle /> */}
                 
         </div>
