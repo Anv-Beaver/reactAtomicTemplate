@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Logobox = styled.div`
     position: relative;
     top: 6px;
