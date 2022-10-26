@@ -6,12 +6,12 @@ import { ChartTitle, Text} from "../atoms/ChartTitle";
 export const RadarCard = ({}) => {
     return (
         <CardStatisticsLight3>
-        <RadarContainer>
-            <ChartTitle>
-                <Text>아아아아아아</Text>
-            </ChartTitle>
-            <Radar></Radar>
-        </RadarContainer>
+            <RadarContainer>
+                <ChartTitle>
+                    <Text>아아아아아아</Text>
+                </ChartTitle>
+                <Radar></Radar>
+            </RadarContainer>
         </CardStatisticsLight3>
     );
 };

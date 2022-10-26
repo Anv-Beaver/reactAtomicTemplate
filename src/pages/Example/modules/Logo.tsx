@@ -7,9 +7,9 @@ export const Logo = ({}) => {
                 <Logo_textAndLine>
                     <IndigoRectangle_LogoLine />
                     <Text_ANV>ANV_1</Text_ANV>
+
                 </Logo_textAndLine>
             </LogoSpan> 
-
         </LogoContainer>
     );
 }

@@ -3,10 +3,11 @@ export {CardStatisticsLight1, CardStatisticsLight2, CardStatisticsLight3, IconAn
 
 
 const CardStatisticsLight1 = styled.div`
-  width: 365px;
-  left: 417px;
-  top: 42.1px;
-  position: absolute;
+  // ! 수정 7
+  /* width: 365px; */
+  /* left: 417px; */
+  /* top: 42.1px; */
+  /* position: absolute; */
   gap: 12px;
   display: flex;
   flex-direction: column;
@@ -14,17 +15,19 @@ const CardStatisticsLight1 = styled.div`
   padding: 20px;
   border-radius: 4px;
   background-color: #ffffff;
+  margin-right: 70.6px;
   box-shadow: 0px 0px 1px 0px rgba(9, 30, 66, 0.31),
     0px 3px 8px 0px rgba(9, 30, 66, 0.16);
-  transform: rotate(-0.33deg);
-  transform-origin: 0px 0px;
+  // ! 수정  
+  /* transform: rotate(-0.33deg); */
+  /* transform-origin: 0px 0px; */
 `;
 
 const CardStatisticsLight2 = styled.div`
-  width: 365px;
-  left: 417px;
-  top: 222px;
-  position: absolute;
+  /* width: 365px; */
+  /* left: 417px; */
+  /* top: 222px; */
+  /* position: absolute; */
   gap: 12px;
   display: flex;
   flex-direction: column;
@@ -32,6 +35,7 @@ const CardStatisticsLight2 = styled.div`
   align-items: stretch;
   padding: 20px;
   border-radius: 4px;
+  margin-right: 70.6px;
   background-color: #ffffff;
   box-shadow: 0px 0px 1px 0px rgba(9, 30, 66, 0.31),
     0px 3px 8px 0px rgba(9, 30, 66, 0.16);
@@ -40,11 +44,11 @@ const CardStatisticsLight2 = styled.div`
 `;
 
 const CardStatisticsLight3 = styled.div`
-  width: 420px;
+  /* width: 420px; */
   height: 415px;
-  left: 417px;
-  top: 400px;
-  position: absolute;
+  /* left: 417px; */
+  /* top: 400px; */
+  /* position: absolute; */
   gap: 12px;
   padding: 20px;
   border-radius: 11px;

@@ -16,15 +16,17 @@ export const Board = ({}) => {
                 <LeftTopCard/>
                 <GraphCard/>
             </LeftColumn>
-
-            <MiddleColumn>
+        
+            
+            {/* // ! 수정7 */}
+            <MiddleColumn style={{marginLeft: "102px"}}>
                 <ProgressCard1></ProgressCard1>
                 <ProgressCard2></ProgressCard2>
                 <RadarCard></RadarCard>
             </MiddleColumn>
-            <Line></Line>
-            <Line2></Line2>
-            <RightColumn>
+            {/* <Line></Line> */}
+            {/* <Line2></Line2> */}
+            <RightColumn style={{marginLeft: "28px"}}>
 
                 <RadarCard12></RadarCard12>
                 

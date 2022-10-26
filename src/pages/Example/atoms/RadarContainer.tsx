@@ -5,14 +5,14 @@ const RadarContainer = styled.div`
   height: 100%;
   position: relative;
   top: -30px;
-  align-item: center;
+  align-items: center;
 `;
 
 const Radar12Container = styled.div`
   width: 95%;
   height: 95%;
   position: relative;
-  top: -20px;
+  /* top: -20px; */
   align-self: center;
-  align-item: center;
+  align-items: center;
 `;

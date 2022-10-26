@@ -1,9 +1,11 @@
 import styled from "styled-components";
 export {LeftColumn, MiddleColumn, RightColumn}
 const LeftColumn = styled.div`
-  width: 346px;
+  // ! 수정
+  /* width: 346px; */
+  flex: 1;
   position: relative;
-  gap: 10px;
+  /* gap: 10px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +13,9 @@ const LeftColumn = styled.div`
 `;
 
 const MiddleColumn = styled.div`
-  width: 346px;
+  // ! 수정
+  /* width: 346px; */
+  flex: 1;
   gap: 36px;
   display: flex;
   flex-direction: column;
@@ -20,7 +24,9 @@ const MiddleColumn = styled.div`
 `;
 
 const RightColumn = styled.div`
-  width: 346px;
+  // ! 수정
+  /* width: 346px; */
+  flex: 1;
   gap: 36px;
   display: flex;
   flex-direction: column;

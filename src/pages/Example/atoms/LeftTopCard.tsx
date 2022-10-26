@@ -15,7 +15,6 @@ const TextElementsTitle = styled.div`
   overflow: hidden;
 `;
 const Title = styled.div`
-  width: 264px;
   color: #334155;
   font-size: 14px;
   font-weight: 500;
@@ -25,20 +24,20 @@ const Title = styled.div`
 `;
 
 const Text1 = styled.div`
-  width: 126px;
-  left: 19px;
-  top: 286px;
-  position: absolute;
+  /* width: 126px; */
+  /* left: 19px;
+  top: 286px; */
+  /* position: absolute; */
   gap: 6px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  transform: rotate(-0.33deg);
-  transform-origin: 0px 0px;
+  /* transform: rotate(-0.33deg);
+  transform-origin: 0px 0px; */
 `;
 const Text2 = styled.div`
-  width: 193px;
+  /* width: 193px; */
   color: #1e293b;
   font-size: 28px;
   font-weight: 700;
@@ -46,8 +45,8 @@ const Text2 = styled.div`
   line-height: 36px;
 `;
 const Element2 = styled.div`
-  width: 316.2px;
-  height: 41.7px;
+  /* width: 316.2px; */
+  /* height: 41.7px; */
   color: #475569;
   font-size: 14px;
   font-family: Archivo;
@@ -57,13 +56,13 @@ const Element2 = styled.div`
   text-align: left;
 `;
 const MenuMax = styled.div`
-  width: 316px;
+  /* width: 316px; */
   height: 254px;
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin: 0 0px 14.6px 0;
+  /* margin: 0 0px 14.6px 0; */
   padding: 7px 0px 0px 0px;
   border-radius: 0px 0px 4px 4px;
   background-color: #f8fafc;
@@ -79,7 +78,7 @@ const ListItems = styled.div`
   overflow: hidden;
 `;
 const IndigoFlexRow = styled.div`
-  width: 316px;
+  /* width: 316px; */
   height: 48px;
   position: relative;
   display: flex;
@@ -99,7 +98,7 @@ const TextElementsTitle1 = styled.div`
   overflow: hidden;
 `;
 const StateLayer = styled.div`
-  width: 120px;
+  /* width: 120px; */
   height: 48px;
   position: relative;
   gap: 10px;

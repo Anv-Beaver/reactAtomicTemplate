@@ -2,7 +2,7 @@ import styled from "styled-components";
 export {GraphGroup, Subgroup, BarsContainer, TextMonth}
 
 const GraphGroup = styled.div`
-  width: 263px;
+  /* width: 263px; */
   height: 199px;
   gap: 32px;
   display: flex;
@@ -14,7 +14,7 @@ const GraphGroup = styled.div`
 `;
 
 const Subgroup = styled.div`
-  width: 42.4px;
+  /* width: 42.4px; */
   gap: 6px;
   display: flex;
   flex-grow: 1;

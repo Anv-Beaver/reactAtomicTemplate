@@ -2,8 +2,8 @@ import styled from "styled-components";
 export {Background, SliderRoot, Inactive, Active, Track, BaseSliderThumb, Thumb, Tip, Tooltip, State, Bubble, Circle, Triangle, Value, ValueContainer}
 
 const Background = styled.div`
-    width: 281px;
-    top: 20px;
+    /* width: 481px; */
+    /* top: 20px; */
 `
 const SliderRoot = styled.div`
   width: 281px;
@@ -15,7 +15,7 @@ const SliderRoot = styled.div`
   align-items: center;
 `;
 const Inactive = styled.img`
-  width: 295px;
+  /* width: 295px; */
   height: 4px;
   left: 15px;
   top: 30px;
@@ -72,7 +72,7 @@ const Tooltip = styled.div`
   width: 0px;
   height: 15.5px;
   position: relative;
-  top: -44.5px
+  top: -44.5px;
   
 `;
 const Bubble = styled.div`
@@ -112,8 +112,8 @@ const Circle = styled.div`
   border-radius: 50%;
   top: -31.5px;
   left: -4px;
-  opacity: 0.5
-  z-index: -1
+  opacity: 0.5;
+  z-index: -1;
 `;
 
 const Triangle = styled.div`
