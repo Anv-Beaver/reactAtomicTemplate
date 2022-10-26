@@ -4,13 +4,15 @@ import { Check_icon, User_icon, Vector_icon } from "../atoms/icons";
 import { Rectangle_0, Menu, Option0, Option0_txt, Option1, Option1_txt, Tap, Option2, Option2_txt, Option3, Option3_txt, Option4, Option4_txt, Alien_txt, Alien_content} from "../atoms/Rectangle_0";
 import { Drake_content, Drake_txt, Line0, Line0_content, Line1, Rectangle_1} from "../atoms/Rectangle_1";
 import { Drake_content_2, Drake_txt_2, Line0_2, Line0_content_2, Line1_2, Rectangle_2} from "../atoms/Rectangle_2";
-import { Bubble_3, Bubble_3_txt, Rectangle_3} from "../atoms/Rectangle_3";
+import { Bubble_3, Bubble_3_txt, Radar0, Rectangle_3} from "../atoms/Rectangle_3";
 import { Bar0, Bar1, Bar10, Bar11, Bar2, Bar3, Bar4, Bar5, Bar6, Bar7, Bar8, Bar9, Bar_graph, Feb, Jul, Mar, May, Rectangle_4, Slider_box, Slider_thumb, Slider_thumb_back, Slider_total, Slider_track } from "../atoms/Rectangle_4";
-import { Bubble_5, Bubble_5_txt, Rectangle_5 } from "../atoms/Rectangle_5";
+import { Anything, Bubble_5, Bubble_5_txt, Radar1, Rectangle_5 } from "../atoms/Rectangle_5";
 import { Dialog, Dialog_0, Dialog_0_circle, Dialog_0_txt, Dialog_1, Dialog_1_circle, Dialog_1_txt, Namu, Namu_content, Rectangle_6 } from "../atoms/Rectangle_6";
 import ic24_user from '../../../assets/images/ic32-user.png';
 import ic24_vector from '../../../assets/images/vector_icon.png';
 import ic24_check from '../../../assets/images/check_box.png';
+import { Just_line0, Just_line1 } from "../atoms/Just_line";
+import ic24_anything from '../../../assets/images/Tooltip.png';
 
 export const Body = () => {
     return (
@@ -87,6 +89,7 @@ export const Body = () => {
                             아아아아아어
                         </Bubble_3_txt>
                     </Bubble_3>
+                    <Radar0 />
                 </Rectangle_3>
                 <Rectangle_4>
                     <Bar_graph>
@@ -120,6 +123,8 @@ export const Body = () => {
                             아아아아아아
                         </Bubble_5_txt>
                     </Bubble_5>
+                    <Radar1 />
+                    <Anything src={ic24_anything}/>
                 </Rectangle_5>
                 <Rectangle_6>
                     <Dialog>
@@ -146,6 +151,8 @@ export const Body = () => {
                         </Dialog_1>
                     </Dialog>
                 </Rectangle_6>
+                <Just_line0 />
+                <Just_line1 />
             </Background>
             
         </div>
