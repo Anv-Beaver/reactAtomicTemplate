@@ -1,10 +1,8 @@
 import {combineReducers} from "redux";
+import { ExampleReducer } from "./ExampleReducer";
 
 const rootReducer = combineReducers({
-  // adminReducer,
-  // userNameReducer,
-  // counterReducer,
-  // BottomNavigationBarReducer,
+  ExampleReducer
 });
 
 export default rootReducer;

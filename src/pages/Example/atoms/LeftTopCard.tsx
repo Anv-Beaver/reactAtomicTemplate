@@ -37,16 +37,19 @@ const Text1 = styled.div`
   transform-origin: 0px 0px; */
 `;
 const Text2 = styled.div`
-  /* width: 193px; */
+  width: 193px;
+  height: 37.1px;
   color: #1e293b;
   font-size: 28px;
   font-weight: 700;
   font-family: Archivo;
   line-height: 36px;
+  overflow: hidden;
+
 `;
 const Element2 = styled.div`
-  /* width: 316.2px; */
-  /* height: 41.7px; */
+  width: 316.2px;
+  height: 41.7px;
   color: #475569;
   font-size: 14px;
   font-family: Archivo;
@@ -54,6 +57,8 @@ const Element2 = styled.div`
   white-space: pre-wrap;
   letter-spacing: normal;
   text-align: left;
+  overflow: hidden;
+
 `;
 const MenuMax = styled.div`
   /* width: 316px; */

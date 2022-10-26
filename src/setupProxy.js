@@ -5,8 +5,11 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://www.youtube.com',
+      target: 'https://www.google.com',
       changeOrigin: true,
+      pathRewrite: {
+        "^/api" : ""
+      }
     })
   );
 };

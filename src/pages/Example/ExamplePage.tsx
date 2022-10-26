@@ -8,12 +8,16 @@ import { Logo } from "./modules/Logo"
 import { InputField } from "./modules/InputField"
 import { Toggles } from "./modules/Toggles"
 import { DesktopRoot, Content } from "./atoms/desktopRoot";
+import { RootState } from "../../reducers";
+import { TextState } from "../../reducers/ExampleReducer";
 
 function ExamplePage() {
     const params = useParams();
     const location = useLocation();
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
+
 
     return (
         <DesktopRoot>

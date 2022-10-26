@@ -1,42 +1,46 @@
-import {call, delay, put, takeEvery} from 'redux-saga/effects'
+import {call, delay, put, takeEvery, takeLatest} from 'redux-saga/effects'
+import { get } from '../api/axios';
+import { SEARCH_FAIL, SEARCH_SUCCESS, SEARCH_TRY } from '../pages/Example/ExampleActions';
 
-
-/*
-export function* helloSaga () {
-    console.log('Hello Sagas!');
-
-    const {data} = yield call(searchGoogleApi, "react");
-
-    console.log('Hello Sagas!');
-
-    // const $ = cheerio.load(data);
-    // console.log($);
-
-    console.log("fuck");
-    
-    
-    // console.log($("#video-title").text());
-    
-    // console.log(data);
+type returnType = {
+    title: string,
+    content: string
 }
 
-// worker Saga: 비동기 증가 태스크를 수행할겁니다.
-export function* incrementAsync (action : any) {
-    console.log(action);
-    yield delay(1000);
-    yield put({type: INCREMENT})
-}
-
-// watcher Saga: 각각의 INCREMENT_ASYNC 에 incrementAsync 태스크를 생성할겁니다.
-export function* watchIncrementAsync () {
-    console.log("asdfsdf");
-    yield takeEvery(INCREMENT_ASYNC, incrementAsync)
+const googleAPI = async(text: string) => {
+    const result = await get("/api/search?q="+text);
+    if(result.data){
+        return ({
+            title: result.data,
+            content: result.data
+        })
+    }
+    return false;
 }
 
 
-export function* watchNaverSearch () {
-    console.log("????");
+function* searchSaga (action: any) {
+    console.log('Hello Sagas!' + action.payload);
+
+    const data:returnType = yield call(googleAPI, action.payload);
     
-    yield takeEvery(SEARCH_NAVER, helloSaga)
+    if(data)
+    {
+        yield put({
+            type: SEARCH_SUCCESS,
+            payload: data
+        })
+    }
+    else{
+        yield put({
+            type: SEARCH_FAIL,
+        })
+    }
 }
-*/
+
+
+
+
+export function* watchGoogleSearch () {
+    yield takeLatest(SEARCH_TRY, searchSaga)
+}
