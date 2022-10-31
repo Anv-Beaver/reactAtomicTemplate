@@ -15,7 +15,6 @@ export const LeftTopCard = ({}) => {
       event.currentTarget.style.backgroundColor = '#77a7f5';
       setActiveTitle(event.currentTarget.innerText);
     }
-    
   }
 
   console.log(activeTitle)
