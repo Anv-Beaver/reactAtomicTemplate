@@ -1,51 +1,41 @@
 import { RectangleCard } from "../atoms/RectangleCard";
-import {Tap, StateLayer, Element2, MenuMax, ListItems, Title, IndigoFlexRow, FlexColumn, Text1, Text2, TextElementsTitle, TextElementsTitle2, TextElementsTitle1} from "../atoms/LeftTopCard"
+import {Tap, StateLayer, MenuMax, ListItems,  Text, TextElementsTitle, } from "../atoms/LeftTopCard"
+import React, { useState } from 'react';
 
 export const LeftTopCard = ({}) => {
-    return (
+  const [titles, setTitle] = useState(["가나다라마바사", "아자차카타파하", "이이비씨디엪", "닥스훈트 말티즈", "치와와 포메라니안"]);
+  const [activeTitle, setActiveTitle] = useState('외계인 실존설');
+
+  const handleClick = (event: any) =>{
+    if(event.currentTarget.style.backgroundColor) {
+      event.currentTarget.style.backgroundColor = null;
+      setActiveTitle('외계인 실존설');
+    }
+    else{
+      event.currentTarget.style.backgroundColor = '#77a7f5';
+      setActiveTitle(event.currentTarget.innerText);
+    }
+    
+  }
+
+  console.log(activeTitle)
+  return (
       <RectangleCard>
-        {/* // ! 수정 */}
         <MenuMax>
           <ListItems>
-            <FlexColumn>
-              <TextElementsTitle>
-                <Title>가나다라마사바</Title>
-              </TextElementsTitle>
-            </FlexColumn>
-            <IndigoFlexRow>
-              <TextElementsTitle1>
-                <Title>아자차카타파하</Title>
-              </TextElementsTitle1>
-              <StateLayer>
-                <Tap src={`https://file.rendit.io/n/ffZU65FNfk549tzoJyv6.svg`} />
-              </StateLayer>
-            </IndigoFlexRow>
-            <FlexColumn>
-              <TextElementsTitle2>
-                <Title>에이비씨디이엪</Title>
-              </TextElementsTitle2>
-            </FlexColumn>
-            <FlexColumn>
-              <TextElementsTitle>
-                <Title>닥스훈트 말티즈</Title>
-              </TextElementsTitle>
-            </FlexColumn>
-            <FlexColumn>
-              <TextElementsTitle>
-                <Title>치와와 포메라니안</Title>
-              </TextElementsTitle>
-            </FlexColumn>
+          { titles.map((title, index) => {
+            return (          
+                <TextElementsTitle key={index} onClick={handleClick}>{title}</TextElementsTitle>
+              ) 
+          })}
           </ListItems>
         </MenuMax>
 
-        <Text1 style={{marginTop: "16px"}}>
-          <Text2>외계인 실존설</Text2>
-          <Element2>
-            외계인의 존재에 대한 진지한 고찰은 단 하나의 사실에서 시작된다. 바로
-            우리가 존재한다는 것이다.
-          </Element2>
-        </Text1>
-
+        <Text style={{marginTop: "16px", marginBottom: "16px"}}>{activeTitle}</Text>
+        <div style={{fontSize: "14px"}}>
+          외계인의 존재에 대한 진지한 고찰은 단 하나의 사실에서 시작된다. 바로
+          우리가 존재한다는 것이다.
+        </div>
       </RectangleCard>
     );
   };
