@@ -1,5 +1,5 @@
 import { RectangleCard } from "../atoms/RectangleCard";
-import {Tap, StateLayer, MenuMax, ListItems,  Text, TextElementsTitle, } from "../atoms/LeftTopCard"
+import {Tap, MenuMax, ListItems,  Text, TextElementsTitle, } from "../atoms/LeftTopCard"
 import React, { useState } from 'react';
 
 export const LeftTopCard = ({}) => {
@@ -7,11 +7,15 @@ export const LeftTopCard = ({}) => {
   const [activeTitle, setActiveTitle] = useState('외계인 실존설');
 
   const handleClick = (event: any) =>{
+    const listItems = document.getElementsByClassName('listItem') as HTMLCollectionOf<HTMLElement>;
     if(event.currentTarget.style.backgroundColor) {
       event.currentTarget.style.backgroundColor = null;
       setActiveTitle('외계인 실존설');
     }
     else{
+      for (let i = 0; i < listItems.length; i++) {
+        listItems[i].style.backgroundColor = null!;
+      }
       event.currentTarget.style.backgroundColor = '#77a7f5';
       setActiveTitle(event.currentTarget.innerText);
     }
@@ -24,7 +28,7 @@ export const LeftTopCard = ({}) => {
           <ListItems>
           { titles.map((title, index) => {
             return (          
-                <TextElementsTitle key={index} onClick={handleClick}>{title}</TextElementsTitle>
+                <TextElementsTitle className="listItem" key={index} onClick={handleClick}>{title}</TextElementsTitle>
               ) 
           })}
           </ListItems>

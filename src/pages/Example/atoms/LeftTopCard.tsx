@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export {Tap, StateLayer, MenuMax, ListItems,  Text, TextElementsTitle}
+export {Tap, MenuMax, ListItems,  Text, TextElementsTitle}
 
 const TextElementsTitle = styled.div`
   display: flex;
@@ -46,20 +46,6 @@ const ListItems = styled.div`
   flex-grow: 1;
   flex-direction: column;
   justify-content: flex-start;
-  overflow: hidden;
-`;
-
-const StateLayer = styled.div`
-  /* width: 120px; */
-  height: 48px;
-  position: relative;
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 0 126px 0 18px;
-  padding: 10px;
-  border-radius: 50px;
   overflow: hidden;
 `;
 
