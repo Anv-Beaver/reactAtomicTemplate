@@ -15,9 +15,9 @@ const ChartTitle = styled.div`
 const ChartTitleRight = styled.div`
     width: 116px;
     height: 33px;
-    position: relative;
-    top: 20px;
-    left: 300px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
     justify-content: center;
     align-items: center;
     margin: 0px;

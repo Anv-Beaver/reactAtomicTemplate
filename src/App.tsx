@@ -8,8 +8,9 @@ import { useDispatch } from 'react-redux';
 import ExamplePage from './pages/Example/ExamplePage';
 
 
+// ! 수정 1
 const Background = styled.div`
-    max-width: 150px;
+    /* max-width: 150px; */
 `
 
 

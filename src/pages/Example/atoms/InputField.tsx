@@ -20,7 +20,11 @@ const Fields = styled.div`
   background-color: #eff6ff;
 `;
 const Text1 = styled.div`
-  width: 200px;
+  /* width: 200px; */
+  /* flex: 1; */
+  // ! 수정
+  width: calc(100vw - 670.6px - 469.1px);
+  min-width: 200px;
   height: 25.1px;
   display: flex;
   flex-grow: 1;
@@ -30,8 +34,6 @@ const Text1 = styled.div`
   border-radius: 50px;
 `;
 const AtomText = styled.div`
-  width: 31.1px;
-  height: 24.2px;
   gap: 12px;
   display: flex;
   flex-grow: 1;

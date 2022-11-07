@@ -13,24 +13,22 @@ function ExamplePage() {
     const params = useParams();
     const location = useLocation();
     const navigate = useNavigate();
-
     const dispatch = useDispatch();
+
     return (
-        <div>
-            <DesktopRoot>
+        <DesktopRoot>
+            {/* // ! 수정 3 */}
+            <div style={{display: "flex", alignItems: "center", marginBottom: "20px", minWidth: "1500px"}}>
                 <Logo></Logo>
                 <Toggles></Toggles>        
-                <Content>
+                <Content  style={{marginLeft: "58.3px"}}>
                     <InputField></InputField>
                 </Content>
+            </div>
 
-                <Board/>
-                
-            </DesktopRoot>
-        </div>
-        
+            <Board/>
+        </DesktopRoot>
     );
-   
 }
 
 export default ExamplePage;
